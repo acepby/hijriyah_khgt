@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:hijriyah_indonesia/hijriyah_khgt.dart';
+import 'package:hijriyah_khgt/hijriyah_khgt.dart';
 //import 'package:intl/date_symbol_data_local.dart';
 
 void main() {

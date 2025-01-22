@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hijriyah_indonesia/hijriyah_khgt.dart';
+import 'package:hijriyah_khgt/hijriyah_khgt.dart';
 
 String arabic = 'ar';
 String indonesia = 'id';

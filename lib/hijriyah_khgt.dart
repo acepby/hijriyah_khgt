@@ -1,7 +1,7 @@
 library hijri;
 
-import 'package:hijriyah_indonesia/digits_converter.dart';
-import 'package:hijriyah_indonesia/exstensions/word_extension.dart';
+import 'package:hijriyah_khgt/digits_converter.dart';
+import 'package:hijriyah_khgt/exstensions/word_extension.dart';
 import 'hijriyah_array.dart';
 import 'package:flutter/foundation.dart';
 
