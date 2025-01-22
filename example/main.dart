@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hijriyah_indonesia/hijriyah_indonesia.dart';
+import 'package:hijriyah_indonesia/hijriyah_khgt.dart';
 
 String arabic = 'ar';
 String indonesia = 'id';
 
 void main() {
   /* set locale add this */
-  Hijriyah.setLocal(indonesia);
+  //Hijriyah.setLocal(indonesia);
   runApp(const MyApp());
 }
 
@@ -47,8 +47,8 @@ class _HomeViewState extends State<HomeView> {
       ),
       body: Center(
         child: Text(
-          Hijriyah.fromDate(DateTime.parse('2024-08-23').toLocal())
-              .toFormat("EEEE, dd MMMM yyyy"),
+          Hijriyah.fromDate(DateTime(2025, 01, 20)).toString(),
+              //.toFormat("EEEE, dd MMMM yyyy"),
           style: const TextStyle(color: Colors.white),
         ), /* converter to hijriyah indonesia */
       ),
