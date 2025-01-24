@@ -4,5 +4,5 @@
 ## 0.1.6
 * implement KHGT 
 
-## 0.1.6-1
+## 0.1.7
 * add hijri method
