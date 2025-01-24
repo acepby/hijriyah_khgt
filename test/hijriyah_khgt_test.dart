@@ -20,8 +20,6 @@ void main() {
   // Test 3: Check if a date is before another date
   try {
     Hijriyah date1 = Hijriyah.fromDate(DateTime(2024, 07, 20));
-    //Hijriyah date2 = Hijriyah.fromDate(DateTime(2025, 06, 07));
-    //debugPrint(date1.isBefore(date2.hYear, date2.hMonth, date2.hDay).toString());
     debugPrint(date1.isBefore(1446,09,01).toString());
     
   } catch (e) {
@@ -58,14 +56,18 @@ void main() {
   } catch (e) {
     debugPrint("Test 7 failed: $e");
   }
-  // Test 8: Check if a date is before another date
+  // Test 8: Check if a date fulldate
   try {
-    //Hijriyah date1 = Hijriyah.fromDate(DateTime(2024, 07, 20));
-    //Hijriyah date2 = Hijriyah.fromDate(DateTime(2025, 06, 07));
-    //debugPrint(date1.isBefore(date2.hYear, date2.hMonth, date2.hDay).toString());
     String masehi = Hijriyah.fromDate(DateTime(2025,03,01)).fullDate();
     debugPrint(masehi);
   } catch (e) {
     debugPrint("Test 8 failed: $e");
+  }
+  // Test 9: Check date from Hijri
+  try {
+    String masehi = Hijriyah.hijri(1446,07,24).fullDate();
+    debugPrint(masehi);
+  } catch (e) {
+    debugPrint("Test 9 failed: $e");
   }
 }

@@ -72,6 +72,12 @@ class Hijriyah {
     DateTime now = DateTime.now();
     gregorianToHijri(now.year, now.month, now.day);
   }
+  
+  Hijriyah.hijri(int iYear, int iMonth, int iDay) {
+    DateTime masehi = hijriToGregorian(iYear, iMonth, iDay);
+    gregorianToHijri(masehi.year, masehi.month, masehi.day);
+    
+  }
 
   Hijriyah.addMonth(int year, int month) {
     hYear = month % 12 == 0 ? year - 1 : year;

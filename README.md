@@ -1,4 +1,4 @@
-# Hijriyah Indonesia
+# Hijriyah Indonesia KHGT
 
 Hijriyah Calendar Converter
 
@@ -45,6 +45,15 @@ Hijriyah Calendar Converter
   print(h_date.getLongMonthName()); //Rabiul Awwal
   print(h_date.lengthOfMonth); // 29 days
 ```
+##### hijri date 
+  ```dart
+  var h_date = Hijriyah.hijri(1446,07,24);
+  print(h_date.toString()); // 24 1 -7-1446 
+  print(h_date.getShortMonthName()); //Jum
+  print(h_date.getLongMonthName()); //Rajab
+  print(h_date.lengthOfMonth); // 30 days
+  print(h_date.nmPasaran); //Legi
+```
 ##### Check if date is valid
 ```dart
   //
@@ -69,7 +78,7 @@ Hijriyah Calendar Converter
   ##### Compare
 
 ```dart
-  //Suppose current hijri data is: TSelasa, 14 Shaffar , 1444 h
+  //Suppose current hijri data is: Selasa, 14 Shaffar , 1444 h
   print(_today.isAfter(1440, 11, 12)); // false
   print(_today.isBefore(1440, 11, 12)); // true
   print(_today.isAtSameMomentAs(1440, 11, 12)); // false
