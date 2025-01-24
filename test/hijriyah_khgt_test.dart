@@ -70,4 +70,15 @@ void main() {
   } catch (e) {
     debugPrint("Test 9 failed: $e");
   }
+  // Test 10: Check date addition
+  try {
+    Hijriyah today = Hijriyah.now();
+    Hijriyah futureDate = today.addDays(10);
+    Hijriyah pastDate = today.subtractDays(5);
+    debugPrint(today.fullDate());
+    debugPrint(futureDate.fullDate());
+    debugPrint(pastDate.fullDate());
+  } catch (e) {
+    debugPrint("Test 9 failed: $e");
+  }
 }

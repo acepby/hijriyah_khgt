@@ -347,4 +347,14 @@ class Hijriyah {
     
     return pasaran;
   }
+
+   Hijriyah addDays(int days) {
+    DateTime gregorianDate = hijriToGregorian(hYear, hMonth, hDay);
+    DateTime newGregorianDate = gregorianDate.add(Duration(days: days));
+    return Hijriyah.fromDate(newGregorianDate);
+  }
+
+  Hijriyah subtractDays(int days) {
+    return addDays(-days);
+  }
 }

@@ -6,3 +6,6 @@
 
 ## 0.1.7
 * add hijri method
+
+## 0.1.8
+* add addition and subtract methods
