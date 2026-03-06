@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 
 class Hijriyah {
   static const int ummulquraOffset = 16260;
-  static const int khgtOffset = 60499;
+  static const int khgtOffset = 60853;
   DateTime startKHGT = DateTime(2024,7,7);
   int hYear = 0;
   int hMonth = 0;
