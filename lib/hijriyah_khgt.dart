@@ -8,7 +8,7 @@ import 'package:flutter/foundation.dart';
 class Hijriyah {
   static const int ummulquraOffset = 16260;
   static const int khgtOffset = 60853;
-  DateTime startKHGT = DateTime(2024,7,7);
+  DateTime startKHGT = DateTime(2025,6,26);
   int hYear = 0;
   int hMonth = 0;
   int hDay = 0;
@@ -65,7 +65,7 @@ class Hijriyah {
   }
 
   static int _determineOffset(DateTime date) {
-    return date.isBefore(DateTime(2024, 7, 7)) ? ummulquraOffset : khgtOffset;
+    return date.isBefore(DateTime(2025, 6, 26)) ? ummulquraOffset : khgtOffset;
   }
 
   void _now() {
@@ -137,15 +137,16 @@ class Hijriyah {
   String gregorianToHijri(int year, int month, int day) {
     int cjdn = _calculateChronologicalJulianDay(year, month, day);
     int mcjdn = cjdn - 2400000;
-    //debugPrint("offset: $offset");
+    debugPrint("offset: $offset");
     //debugPrint("mcjdn: $mcjdn");
     int i = _getIndexForOffset(mcjdn, offset);
     
-    int iln = (offset == ummulquraOffset) ? i + offset : i + (offset - 43159).floor();
-    //debugPrint("i: $i");
-    //debugPrint("iln: $iln");
+    int iln = (offset == ummulquraOffset) ? i + offset : i + (offset - 43501).floor();
+    debugPrint("i: $i");
+    debugPrint("iln: $iln");
     hYear = ((iln - 1) ~/ 12) + 1;
     hMonth = iln - 12 * ((iln - 1) ~/ 12);
+    debugPrint("hMonth : $hMonth");
 
     int? dataIndex1 = _getDataIndex(i - 1, offset);
     int? dataIndex2 = _getDataIndex(i, offset);
@@ -175,6 +176,7 @@ class Hijriyah {
 
   int _getIndexForOffset(int mcjdn, int offset) {
     List<int> dateArray = (offset == ummulquraOffset) ? ummAlquraDateArray : khgtDateArray;
+    //debugPrint("mcjdn:$mcjdn");
     return dateArray.indexWhere((value) => value > mcjdn);
   }
 
@@ -206,7 +208,7 @@ class Hijriyah {
 
   int _getNewMoonMJDNIndex(int hy, int hm) {
     int cYears = hy - 1, totalMonths = (cYears * 12) + 1 + (hm - 1);
-    int mOffset = (hy < 1446)? ummulquraOffset : khgtOffset - 43159;
+    int mOffset = (hy < 1447)? ummulquraOffset : khgtOffset - 43501;
     return totalMonths - mOffset;
   }
 
@@ -340,7 +342,7 @@ class Hijriyah {
   }
 
   int _getPasaran(int year, int month, int day){
-    //offset pasaran dari tanggal 7,7,2024 adalah kliwon 
+    //offset pasaran dari tanggal 26,6,2024 adalah wage 
     //bandingkan tanggal hari ini dengan base startKHGT
     int diff = DateTime(year,month,day).difference(startKHGT).inDays;
     int pasaran = _gMod(diff, 5) == 0 ? 5 : _gMod(diff, 5);

@@ -5,7 +5,7 @@ import 'package:hijriyah_khgt/hijriyah_khgt.dart';
 void main() {
   // Test 1: Convert a date to Hijri and format it
   try {
-    debugPrint(Hijriyah.fromDate(DateTime(2024, 07, 6)).toFormat("EE PP, dd MMMM yyyy"));
+    debugPrint(Hijriyah.fromDate(DateTime(2028, 01, 28)).toFormat("EE PP, dd MMMM yyyy"));
   } catch (e) {
     debugPrint("Test 1 failed: $e");
   }

@@ -58,11 +58,11 @@ const Map<int, String> idMonthShortNames = {
 };
 
 const Map<int, String> pasaranNames = {
-  5: 'Kliwon',
-  1: 'Legi',
-  2: 'Pahing',
-  3: 'Pon',
-  4: 'Wage'
+  5: 'Wage',
+  1: 'Kliwon',
+  2: 'Legi',
+  3: 'Pahing',
+  4: 'Pon'
 };
 
 const Map<int, String> arMonthNames = {
@@ -1950,7 +1950,8 @@ const List<int> ummAlquraDateArray = [
 
 //KHGT Muhammadiyah started at 60853 that is 1 Muharram 1447 H (26 Juni 2025 M)
 //update kalender KHGT muhammadiyah untuk 50 tahun ke depan
-const List<int> khgtDateArray = [60853,
+const List<int> khgtDateArray = [
+ 60853,
  60883,
  60912,
  60942,

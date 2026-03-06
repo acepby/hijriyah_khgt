@@ -14,4 +14,7 @@
 * update kalender KHGT dan penambahan data
 
 ## 0.1.91
-^ update khgt offset to 60853
+* update khgt offset to 60853
+
+## 0.1.92
+* update KHGT offset penyesuaian data
