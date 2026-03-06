@@ -9,3 +9,6 @@
 
 ## 0.1.8
 * add addition and subtract methods
+
+## 0.1.9 
+* update kalender KHGT dan penambahan data

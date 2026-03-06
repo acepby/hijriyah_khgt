@@ -1,6 +1,6 @@
 # Hijriyah Indonesia KHGT
 
-Hijriyah Calendar Converter
+Kalender Hijriah Global Tunggal (KHGT) diusulkan sebagai solusi integratif untuk mewujudkan prinsip "satu hari, satu tanggal" bagi seluruh umat Islam
 
 
 #### Usage
