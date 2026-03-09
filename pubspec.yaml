@@ -1,6 +1,6 @@
 name: hijriyah_khgt
 description: KHGT (Kalender Hijriyah Global Tunggal).
-version: 0.1.92
+version: 0.1.93
 homepage: https://github.com/acepby/hijriyah_khgt
 
 environment:

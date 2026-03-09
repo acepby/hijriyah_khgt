@@ -106,7 +106,7 @@ class Hijriyah {
     int iln = (ii * 12) + 1 + (im - 1);
     //offset = (iy < 1446) ? ummulquraOffset:khgtOffset;
     //debugPrint("Offset: $offset");
-    int i = (offset == ummulquraOffset) ? iln - offset : iln - (offset - 43159).floor();//iln - offset;
+    int i = (offset == ummulquraOffset) ? iln - offset : iln - (offset - 43501).floor();//iln - offset;
     //debugPrint("i: $i");
     int mcjdn = id + _getDataIndex(i - 1, offset)! - 1;
     int cjdn = mcjdn + 2400000;
@@ -137,16 +137,16 @@ class Hijriyah {
   String gregorianToHijri(int year, int month, int day) {
     int cjdn = _calculateChronologicalJulianDay(year, month, day);
     int mcjdn = cjdn - 2400000;
-    debugPrint("offset: $offset");
+    //debugPrint("offset: $offset");
     //debugPrint("mcjdn: $mcjdn");
     int i = _getIndexForOffset(mcjdn, offset);
     
     int iln = (offset == ummulquraOffset) ? i + offset : i + (offset - 43501).floor();
-    debugPrint("i: $i");
-    debugPrint("iln: $iln");
+    //debugPrint("i: $i");
+    //debugPrint("iln: $iln");
     hYear = ((iln - 1) ~/ 12) + 1;
     hMonth = iln - 12 * ((iln - 1) ~/ 12);
-    debugPrint("hMonth : $hMonth");
+    //debugPrint("hMonth : $hMonth");
 
     int? dataIndex1 = _getDataIndex(i - 1, offset);
     int? dataIndex2 = _getDataIndex(i, offset);

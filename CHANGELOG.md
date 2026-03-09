@@ -18,3 +18,6 @@
 
 ## 0.1.92
 * update KHGT offset penyesuaian data
+
+## 0.1.93
+* recheck error of offset
